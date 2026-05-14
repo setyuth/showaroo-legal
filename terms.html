@@ -6,80 +6,400 @@
 <title>ShowAroo — Terms of Service</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
 :root {
-  --red: #E50914; --red-glow: rgba(229,9,20,0.15); --red-subtle: rgba(229,9,20,0.08);
-  --red-border: rgba(229,9,20,0.25); --bg: #080810; --bg2: #0e0e18;
-  --surface: #13131f; --surface2: #1a1a28; --border: rgba(255,255,255,0.07);
-  --on: #f0f0f8; --on2: rgba(240,240,248,0.7); --muted: rgba(240,240,248,0.35);
+  --red: #E50914;
+  --red-glow: rgba(229,9,20,0.15);
+  --red-subtle: rgba(229,9,20,0.08);
+  --red-border: rgba(229,9,20,0.25);
+  --bg: #080810;
+  --bg2: #0e0e18;
+  --surface: #13131f;
+  --surface2: #1a1a28;
+  --border: rgba(255,255,255,0.07);
+  --on: #f0f0f8;
+  --on2: rgba(240,240,248,0.7);
+  --muted: rgba(240,240,248,0.35);
+  --accent: #E50914;
 }
-body { background: var(--bg); color: var(--on); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; line-height: 1.75; min-height: 100vh; }
-body::before { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 500px; background: radial-gradient(ellipse, rgba(229,9,20,0.06) 0%, transparent 70%); pointer-events: none; z-index: 0; }
-nav { position: sticky; top: 0; z-index: 100; background: rgba(8,8,16,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-.nav-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; border: none; }
-.logo img { width: 36px; height: 36px; border-radius: 9px; object-fit: cover; }
-.logo-fallback { width: 36px; height: 36px; border-radius: 9px; background: var(--red); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: white; flex-shrink: 0; box-shadow: 0 0 20px rgba(229,9,20,0.4); }
-.logo-text { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.03em; color: var(--on); }
+
+body {
+  background: var(--bg);
+  color: var(--on);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(229,9,20,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,16,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  object-fit: cover;
+}
+
+.logo-fallback {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(229,9,20,0.4);
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--on);
+}
+
 .logo-text em { font-style: normal; color: var(--red); }
+
 .nav-links { display: flex; gap: 4px; }
-.nav-link { padding: 6px 14px; border-radius: 8px; font-size: 0.8125rem; font-weight: 500; color: var(--muted); text-decoration: none; border: none; transition: color 0.2s, background 0.2s; }
-.nav-link:hover, .nav-link.active { color: var(--on); background: var(--surface); border: none; }
-.hero { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 72px 24px 56px; border-bottom: 1px solid var(--border); }
-.badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; border-radius: 100px; border: 1px solid var(--red-border); background: var(--red-subtle); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 28px; }
-.badge-dot { width: 5px; height: 5px; background: var(--red); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; color: var(--on); margin-bottom: 20px; }
-.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
-.meta-pill { display: flex; align-items: center; gap: 7px; font-size: 0.8125rem; color: var(--muted); font-weight: 500; }
-.meta-pill svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; opacity: 0.6; }
-.page-body { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 0 24px 100px; display: grid; grid-template-columns: 220px 1fr; gap: 0 56px; align-items: start; }
-.sidebar { position: sticky; top: 80px; padding: 32px 0; }
-.toc-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-left: 4px; }
-.toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-.toc-list a { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 8px; font-size: 0.8125rem; font-weight: 500; color: var(--muted); text-decoration: none; border: none; transition: color 0.15s, background 0.15s; }
-.toc-list a:hover { color: var(--on2); background: var(--surface); border: none; }
-.toc-num { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--red); opacity: 0.6; min-width: 20px; }
+
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  border: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--on);
+  background: var(--surface);
+  border: none;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 24px 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--red-border);
+  background: var(--red-subtle);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 28px;
+}
+
+.badge-dot {
+  width: 5px; height: 5px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--on);
+  margin-bottom: 20px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.meta-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.meta-pill svg {
+  width: 13px; height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  opacity: 0.6;
+}
+
+.page-body {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 100px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0 56px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 80px;
+  padding: 32px 0;
+}
+
+.toc-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  border: none;
+  transition: color 0.15s, background 0.15s;
+}
+
+.toc-list a:hover {
+  color: var(--on2);
+  background: var(--surface);
+  border: none;
+}
+
+.toc-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--red);
+  opacity: 0.6;
+  min-width: 20px;
+}
+
 .content { padding: 32px 0; }
-.section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+
+.section {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+
 .section:last-child { border-bottom: none; }
-.section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
-.sec-num { font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem; color: var(--red); opacity: 0.7; font-weight: 500; }
-h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.025em; color: var(--on); }
-p { color: var(--on2); margin-bottom: 14px; font-weight: 400; }
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.sec-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  color: var(--red);
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--on);
+}
+
+p {
+  color: var(--on2);
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
 p:last-child { margin-bottom: 0; }
+
 strong { color: var(--on); font-weight: 600; }
-ul { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
-li { display: flex; align-items: flex-start; gap: 12px; color: var(--on2); }
-li::before { content: ''; width: 4px; height: 4px; background: var(--red); border-radius: 50%; flex-shrink: 0; margin-top: 0.65em; }
-.callout { background: var(--surface); border: 1px solid var(--border); border-left: 2px solid var(--red); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
-.callout p { margin: 0; font-size: 0.875rem; color: var(--on2); }
-a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red-border); transition: border-color 0.15s; font-weight: 500; }
+
+ul {
+  list-style: none;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--on2);
+}
+
+li::before {
+  content: '';
+  width: 4px; height: 4px;
+  background: var(--red);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.65em;
+}
+
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--red);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--on2);
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid var(--red-border);
+  transition: border-color 0.15s;
+  font-weight: 500;
+}
+
 a:hover { border-color: var(--red); }
-footer { position: relative; z-index: 1; border-top: 1px solid var(--border); background: var(--bg2); }
-.footer-inner { max-width: 900px; margin: 0 auto; padding: 36px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+
+footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 36px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .footer-copy { font-size: 0.8125rem; color: var(--muted); }
+
 .footer-nav { display: flex; gap: 20px; }
-.footer-nav a { font-size: 0.8125rem; color: var(--muted); border: none; transition: color 0.15s; font-weight: 400; }
+
+.footer-nav a {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  border: none;
+  transition: color 0.15s;
+  font-weight: 400;
+}
+
 .footer-nav a:hover { color: var(--on2); border: none; }
-@media (max-width: 680px) { .page-body { grid-template-columns: 1fr; } .sidebar { display: none; } h1 { font-size: 2.25rem; } }
+
+@media (max-width: 680px) {
+  .page-body { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  h1 { font-size: 2.25rem; }
+}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="logo" href="index.html">
-      <img src="https://github.com/setyuth/showaroo-legal/blob/main/Showaroo.png?raw=true" alt="ShowAroo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <a class="logo" href="https://setyuth.github.io/showaroo-legal/index.html">
+      <img src="https://raw.githubusercontent.com/setyuth/showaroo-legal/main/Showaroo.png" alt="ShowAroo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="logo-fallback" style="display:none">S</div>
       <span class="logo-text"><em>Show</em>Aroo</span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Privacy</a>
-      <a href="terms.html" class="nav-link active">Terms</a>
+      <a href="https://setyuth.github.io/showaroo-legal/index.html" class="nav-link">Privacy</a>
+      <a href="https://setyuth.github.io/showaroo-legal/terms.html" class="nav-link active">Terms</a>
     </div>
   </div>
 </nav>
@@ -89,11 +409,11 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
   <h1>Terms of Service</h1>
   <div class="hero-meta">
     <span class="meta-pill">
-      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Last updated: April 2026
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      Last updated: May 2026
     </span>
     <span class="meta-pill">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
       Effective immediately
     </span>
   </div>
@@ -108,10 +428,11 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
       <li><a href="#s3"><span class="toc-num">03</span>Content</a></li>
       <li><a href="#s4"><span class="toc-num">04</span>Streaming</a></li>
       <li><a href="#s5"><span class="toc-num">05</span>User Accounts</a></li>
-      <li><a href="#s6"><span class="toc-num">06</span>Prohibited Conduct</a></li>
-      <li><a href="#s7"><span class="toc-num">07</span>Disclaimers</a></li>
-      <li><a href="#s8"><span class="toc-num">08</span>Limitation of Liability</a></li>
-      <li><a href="#s9"><span class="toc-num">09</span>Changes to Terms</a></li>
+      <li><a href="#s6"><span class="toc-num">06</span>Advertising</a></li>
+      <li><a href="#s7"><span class="toc-num">07</span>Prohibited Conduct</a></li>
+      <li><a href="#s8"><span class="toc-num">08</span>Disclaimers</a></li>
+      <li><a href="#s9"><span class="toc-num">09</span>Limitation of Liability</a></li>
+      <li><a href="#s10"><span class="toc-num">10</span>Changes to Terms</a></li>
     </ul>
   </aside>
 
@@ -121,21 +442,25 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
       <p>Please read these Terms carefully before using ShowAroo. By downloading or using the app, you agree to be bound by these terms.</p>
     </div>
 
+    <!-- 01 -->
     <div class="section" id="s1">
       <div class="section-head"><span class="sec-num">01</span><h2>Acceptance of Terms</h2></div>
-      <p>By accessing or using ShowAroo ("the App"), you agree to be bound by these Terms of Service and our <a href="index.html">Privacy Policy</a>. These terms apply to all users of the App.</p>
+      <p>By accessing or using ShowAroo ("the App"), you agree to be bound by these Terms of Service and our <a href="https://setyuth.github.io/showaroo-legal/index.html">Privacy Policy</a>. These terms apply to all users of the App.</p>
     </div>
 
+    <!-- 02 -->
     <div class="section" id="s2">
       <div class="section-head"><span class="sec-num">02</span><h2>Use of the App</h2></div>
       <p>ShowAroo is provided for personal, non-commercial use only. The App is intended to help users discover and explore movie and TV show information. You agree to use the App only for lawful purposes.</p>
     </div>
 
+    <!-- 03 -->
     <div class="section" id="s3">
       <div class="section-head"><span class="sec-num">03</span><h2>Content</h2></div>
-      <p>All movie and TV show content, metadata, titles, descriptions, posters, and images are provided by a third-party content service and remain the property of their respective copyright holders. ShowAroo does not claim ownership of any content displayed in the App.</p>
+      <p>All movie and TV show content, metadata, titles, descriptions, posters, and images are provided by a third-party content service (TMDB) and remain the property of their respective copyright holders. ShowAroo does not claim ownership of any content displayed in the App.</p>
     </div>
 
+    <!-- 04 -->
     <div class="section" id="s4">
       <div class="section-head"><span class="sec-num">04</span><h2>Streaming</h2></div>
       <p>ShowAroo provides access to third-party streaming sources via an embedded web view. ShowAroo does not host, upload, store, or distribute any streaming content.</p>
@@ -145,6 +470,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
       </div>
     </div>
 
+    <!-- 05 -->
     <div class="section" id="s5">
       <div class="section-head"><span class="sec-num">05</span><h2>User Accounts</h2></div>
       <p>ShowAroo supports optional sign-in via Google or TMDB. If you choose to sign in:</p>
@@ -156,29 +482,55 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
       </ul>
     </div>
 
+    <!-- 06 — NEW: Advertising -->
     <div class="section" id="s6">
-      <div class="section-head"><span class="sec-num">06</span><h2>Prohibited Conduct</h2></div>
+      <div class="section-head"><span class="sec-num">06</span><h2>Advertising</h2></div>
+      <p>ShowAroo displays third-party advertisements served by <strong>Google AdMob</strong> (Google LLC). By using the App you acknowledge and agree that:</p>
+      <ul>
+        <li>Ads are served by Google LLC and its advertising partners, not by ShowAroo</li>
+        <li>Ad content is subject to <a href="https://support.google.com/admob/answer/6128543" target="_blank">Google's advertising policies</a></li>
+        <li>ShowAroo is not responsible for the content, accuracy, or availability of advertised third-party products or services</li>
+        <li>AdMob may collect certain device data (such as your Advertising ID) to serve and measure ads — see our <a href="https://setyuth.github.io/showaroo-legal/index.html#s2">Privacy Policy §02</a> for full details</li>
+      </ul>
+      <div class="callout">
+        <p>You can opt out of personalised advertising at any time via your device's advertising settings or at <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a>. See <a href="https://setyuth.github.io/showaroo-legal/index.html#s3">Privacy Policy §03</a> for step-by-step instructions.</p>
+      </div>
+    </div>
+
+    <!-- 07 (was 06) -->
+    <div class="section" id="s7">
+      <div class="section-head"><span class="sec-num">07</span><h2>Prohibited Conduct</h2></div>
       <p>When using ShowAroo, you agree not to:</p>
       <ul>
         <li>Use the App for any unlawful purpose or in violation of any regulations</li>
         <li>Attempt to reverse-engineer, decompile, or modify the App</li>
         <li>Use automated tools or scripts to access the App or its data sources</li>
+        <li>Interfere with the delivery or display of advertisements within the App</li>
         <li>Use the App in a manner that could damage or impair its functionality</li>
       </ul>
     </div>
 
-    <div class="section" id="s7">
-      <div class="section-head"><span class="sec-num">07</span><h2>Disclaimers</h2></div>
-      <p>ShowAroo is provided "as is" without warranties of any kind. We do not warrant that the App will be uninterrupted, error-free, or that content information will always be accurate or up-to-date.</p>
-    </div>
-
+    <!-- 08 (was 07) -->
     <div class="section" id="s8">
-      <div class="section-head"><span class="sec-num">08</span><h2>Limitation of Liability</h2></div>
-      <p>To the maximum extent permitted by law, ShowAroo and its developers shall not be liable for any indirect, incidental, or consequential damages arising from your use of or inability to use the App.</p>
+      <div class="section-head"><span class="sec-num">08</span><h2>Disclaimers</h2></div>
+      <p>ShowAroo is provided "as is" without warranties of any kind. We do not warrant that the App will be uninterrupted, error-free, or that content information will always be accurate or up-to-date.</p>
+      <p>We are not responsible for the content of third-party advertisements displayed within the App, or for the products and services offered by third-party advertisers.</p>
     </div>
 
+    <!-- 09 (was 08) — updated to mention ads -->
     <div class="section" id="s9">
-      <div class="section-head"><span class="sec-num">09</span><h2>Changes to Terms</h2></div>
+      <div class="section-head"><span class="sec-num">09</span><h2>Limitation of Liability</h2></div>
+      <p>To the maximum extent permitted by law, ShowAroo and its developers shall not be liable for any indirect, incidental, or consequential damages arising from:</p>
+      <ul>
+        <li>Your use of or inability to use the App</li>
+        <li>Any content, products, or services accessed through third-party streaming links</li>
+        <li>Third-party advertisements displayed within the App, including any damages arising from your reliance on advertised products or services</li>
+      </ul>
+    </div>
+
+    <!-- 10 (was 09) -->
+    <div class="section" id="s10">
+      <div class="section-head"><span class="sec-num">10</span><h2>Changes to Terms</h2></div>
       <p>We reserve the right to modify these Terms at any time. Continued use of ShowAroo after changes constitutes acceptance of the updated terms. Check the "Last updated" date to know when terms were last revised.</p>
       <div class="callout">
         <p>Questions about these Terms? Contact us via ShowAroo → Profile → About. We aim to respond within 72 hours.</p>
@@ -192,8 +544,8 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
   <div class="footer-inner">
     <span class="footer-copy">© 2026 ShowAroo. All rights reserved.</span>
     <nav class="footer-nav">
-      <a href="index.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+      <a href="https://setyuth.github.io/showaroo-legal/index.html">Privacy Policy</a>
+      <a href="https://setyuth.github.io/showaroo-legal/terms.html">Terms of Service</a>
     </nav>
   </div>
 </footer>
