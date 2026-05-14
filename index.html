@@ -6,7 +6,7 @@
 <title>ShowAroo — Privacy Policy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -36,7 +36,6 @@ body {
   min-height: 100vh;
 }
 
-/* Ambient glow */
 body::before {
   content: '';
   position: fixed;
@@ -50,7 +49,6 @@ body::before {
   z-index: 0;
 }
 
-/* ── NAV ── */
 nav {
   position: sticky;
   top: 0;
@@ -109,15 +107,9 @@ nav {
   color: var(--on);
 }
 
-.logo-text em {
-  font-style: normal;
-  color: var(--red);
-}
+.logo-text em { font-style: normal; color: var(--red); }
 
-.nav-links {
-  display: flex;
-  gap: 4px;
-}
+.nav-links { display: flex; gap: 4px; }
 
 .nav-link {
   padding: 6px 14px;
@@ -136,7 +128,6 @@ nav {
   border: none;
 }
 
-/* ── HERO ── */
 .hero {
   position: relative;
   z-index: 1;
@@ -206,7 +197,6 @@ h1 {
   opacity: 0.6;
 }
 
-/* ── LAYOUT ── */
 .page-body {
   position: relative;
   z-index: 1;
@@ -219,7 +209,6 @@ h1 {
   align-items: start;
 }
 
-/* ── SIDEBAR TOC ── */
 .sidebar {
   position: sticky;
   top: 80px;
@@ -271,19 +260,14 @@ h1 {
   min-width: 20px;
 }
 
-/* ── CONTENT ── */
-.content {
-  padding: 32px 0;
-}
+.content { padding: 32px 0; }
 
 .section {
   padding: 48px 0;
   border-bottom: 1px solid var(--border);
 }
 
-.section:last-child {
-  border-bottom: none;
-}
+.section:last-child { border-bottom: none; }
 
 .section-head {
   display: flex;
@@ -366,7 +350,6 @@ a {
 
 a:hover { border-color: var(--red); }
 
-/* ── FOOTER ── */
 footer {
   position: relative;
   z-index: 1;
@@ -385,15 +368,9 @@ footer {
   gap: 12px;
 }
 
-.footer-copy {
-  font-size: 0.8125rem;
-  color: var(--muted);
-}
+.footer-copy { font-size: 0.8125rem; color: var(--muted); }
 
-.footer-nav {
-  display: flex;
-  gap: 20px;
-}
+.footer-nav { display: flex; gap: 20px; }
 
 .footer-nav a {
   font-size: 0.8125rem;
@@ -405,7 +382,6 @@ footer {
 
 .footer-nav a:hover { color: var(--on2); border: none; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 680px) {
   .page-body { grid-template-columns: 1fr; }
   .sidebar { display: none; }
@@ -417,15 +393,14 @@ footer {
 
 <nav>
   <div class="nav-inner">
-    <a class="logo" href="index.html">
-      <img src="https://github.com/setyuth/showaroo-legal/blob/main/Showaroo.png?raw=true" alt="ShowAroo"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <a class="logo" href="https://setyuth.github.io/showaroo-legal/index.html">
+      <img src="https://raw.githubusercontent.com/setyuth/showaroo-legal/main/Showaroo.png" alt="ShowAroo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="logo-fallback" style="display:none">S</div>
       <span class="logo-text"><em>Show</em>Aroo</span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link active">Privacy</a>
-      <a href="terms.html" class="nav-link">Terms</a>
+      <a href="https://setyuth.github.io/showaroo-legal/index.html" class="nav-link active">Privacy</a>
+      <a href="https://setyuth.github.io/showaroo-legal/terms.html" class="nav-link">Terms</a>
     </div>
   </div>
 </nav>
@@ -435,11 +410,11 @@ footer {
   <h1>Privacy Policy</h1>
   <div class="hero-meta">
     <span class="meta-pill">
-      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Last updated: April 2026
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      Last updated: May 2026
     </span>
     <span class="meta-pill">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
       Effective immediately
     </span>
   </div>
@@ -450,26 +425,29 @@ footer {
     <div class="toc-label">On this page</div>
     <ul class="toc-list">
       <li><a href="#s1"><span class="toc-num">01</span>Information We Collect</a></li>
-      <li><a href="#s2"><span class="toc-num">02</span>How We Use It</a></li>
-      <li><a href="#s3"><span class="toc-num">03</span>Data Storage</a></li>
-      <li><a href="#s4"><span class="toc-num">04</span>Third-Party Services</a></li>
-      <li><a href="#s5"><span class="toc-num">05</span>Data Security</a></li>
-      <li><a href="#s6"><span class="toc-num">06</span>Children's Privacy</a></li>
-      <li><a href="#s7"><span class="toc-num">07</span>Your Rights</a></li>
-      <li><a href="#s8"><span class="toc-num">08</span>Policy Changes</a></li>
-      <li><a href="#s9"><span class="toc-num">09</span>Contact Us</a></li>
+      <li><a href="#s2"><span class="toc-num">02</span>Advertising &amp; AdMob</a></li>
+      <li><a href="#s3"><span class="toc-num">03</span>Ad Opt-Out</a></li>
+      <li><a href="#s4"><span class="toc-num">04</span>How We Use It</a></li>
+      <li><a href="#s5"><span class="toc-num">05</span>Data Storage</a></li>
+      <li><a href="#s6"><span class="toc-num">06</span>Third-Party Services</a></li>
+      <li><a href="#s7"><span class="toc-num">07</span>Data Security</a></li>
+      <li><a href="#s8"><span class="toc-num">08</span>Children's Privacy</a></li>
+      <li><a href="#s9"><span class="toc-num">09</span>Your Rights</a></li>
+      <li><a href="#s10"><span class="toc-num">10</span>Policy Changes</a></li>
+      <li><a href="#s11"><span class="toc-num">11</span>Contact Us</a></li>
     </ul>
   </aside>
 
   <main class="content">
 
     <div class="callout">
-      <p>ShowAroo is built with your privacy in mind. We do not collect, sell, or share your personal data with third parties for advertising or commercial purposes.</p>
+      <p>ShowAroo is built with your privacy in mind. We do not sell or share your personal data. The app displays third-party ads via Google AdMob — see <a href="#s2">Section 02</a> for full details on what AdMob collects and how to opt out.</p>
     </div>
 
+    <!-- 01 -->
     <div class="section" id="s1">
       <div class="section-head"><span class="sec-num">01</span><h2>Information We Collect</h2></div>
-      <p>ShowAroo does not collect or store personal information on our servers. The app uses publicly available content and metadata from a third-party content service.</p>
+      <p>ShowAroo does not collect or store personal information on our own servers. The app uses publicly available content and metadata from a third-party content service.</p>
       <p>If you sign in with Google, the following is accessed from your account and stored <strong>locally on your device only</strong>:</p>
       <ul>
         <li>Your display name</li>
@@ -477,63 +455,104 @@ footer {
         <li>Your email address (for account identification only)</li>
       </ul>
       <p>If you sign in with TMDB, your session token is stored in your device's secure encrypted storage.</p>
+      <p>Additionally, the app displays ads served by Google AdMob, which may automatically collect certain device data as described in <a href="#s2">Section 02</a>.</p>
     </div>
 
+    <!-- 02 — NEW: AdMob -->
     <div class="section" id="s2">
-      <div class="section-head"><span class="sec-num">02</span><h2>How We Use Information</h2></div>
-      <p>Information is used solely to personalise your in-app experience:</p>
+      <div class="section-head"><span class="sec-num">02</span><h2>Advertising &amp; Data Collected by Google AdMob</h2></div>
+      <p>ShowAroo displays advertisements served by <strong>Google AdMob</strong> (Google LLC). To deliver and measure ads, AdMob and its partners may automatically collect the following data from your device:</p>
+      <ul>
+        <li><strong>Advertising ID (Android Ad ID)</strong> — a resettable device identifier used for interest-based ad targeting and frequency capping</li>
+        <li><strong>IP address</strong> — used to infer approximate location for regional ad serving and fraud prevention</li>
+        <li><strong>Device information</strong> — device model, OS version, app version, and screen size</li>
+        <li><strong>Ad interaction data</strong> — which ads are shown, viewed, or tapped within the app</li>
+      </ul>
+      <div class="callout">
+        <p>This data is collected directly by Google LLC and is subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. ShowAroo does not receive, access, or store this advertising data on its own servers.</p>
+      </div>
+    </div>
+
+    <!-- 03 — NEW: Opt-Out -->
+    <div class="section" id="s3">
+      <div class="section-head"><span class="sec-num">03</span><h2>Interest-Based Advertising &amp; How to Opt Out</h2></div>
+      <p>By default, AdMob may serve <strong>personalised (interest-based) ads</strong> based on your Advertising ID and usage patterns. You can opt out at any time without any charge or loss of app functionality:</p>
+      <ul>
+        <li><strong>Android 12 and below</strong> — Go to <em>Settings → Privacy → Ads → Opt out of Ads Personalisation</em></li>
+        <li><strong>Android 13 and above</strong> — Go to <em>Settings → Privacy → Ads → Delete advertising ID</em></li>
+        <li><strong>Google Ad Settings</strong> — Visit <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a> to manage or reset your ad preferences</li>
+      </ul>
+      <div class="callout">
+        <p>Opting out does not remove ads from the app — it means the ads you see will be less tailored to your interests.</p>
+      </div>
+    </div>
+
+    <!-- 04 (was 02) -->
+    <div class="section" id="s4">
+      <div class="section-head"><span class="sec-num">04</span><h2>How We Use Information</h2></div>
+      <p>Information you provide through sign-in is used solely to personalise your in-app experience:</p>
       <ul>
         <li>Displaying your name and photo on the Profile screen</li>
         <li>Maintaining your login session between app launches</li>
         <li>Saving your watchlist and preferences locally on your device</li>
       </ul>
-      <p>We do not use your information for advertising, analytics, or profiling.</p>
+      <p>ShowAroo does not use your personal information for advertising, analytics, or profiling. Advertising data collected by AdMob is used solely by Google for ad delivery — ShowAroo has no access to it.</p>
     </div>
 
-    <div class="section" id="s3">
-      <div class="section-head"><span class="sec-num">03</span><h2>Data Storage</h2></div>
+    <!-- 05 (was 03) -->
+    <div class="section" id="s5">
+      <div class="section-head"><span class="sec-num">05</span><h2>Data Storage</h2></div>
       <p>All preferences and watchlist data are stored exclusively on your device using local on-device storage. This data never leaves your device — ShowAroo has no servers that store user data.</p>
       <p>Authentication tokens are stored in your device's encrypted secure storage and are never transmitted to or stored by ShowAroo.</p>
     </div>
 
-    <div class="section" id="s4">
-      <div class="section-head"><span class="sec-num">04</span><h2>Third-Party Services</h2></div>
-      <p>ShowAroo integrates with the following third-party services:</p>
+    <!-- 06 (was 04) — updated to include AdMob -->
+    <div class="section" id="s6">
+      <div class="section-head"><span class="sec-num">06</span><h2>Third-Party Services</h2></div>
+      <p>ShowAroo integrates with the following third-party services, each subject to their own privacy policies:</p>
       <ul>
-        <li><strong>Google Sign-In</strong> — optional authentication, subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
-        <li><strong>Content metadata provider</strong> — provides movie/TV information and posters. No personal data is shared.</li>
-        <li><strong>Streaming sources</strong> — linked via embedded web view. ShowAroo does not host or control these sources.</li>
+        <li><strong>Google Sign-In</strong> — optional authentication. Subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
+        <li><strong>Google AdMob</strong> — advertisement delivery and measurement. Subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. See <a href="#s2">Section 02</a> for details on what AdMob collects.</li>
+        <li><strong>TMDB (The Movie Database)</strong> — provides movie and TV metadata, posters, and ratings. No personal data is shared with TMDB. Subject to the <a href="https://www.themoviedb.org/privacy-policy" target="_blank">TMDB Privacy Policy</a></li>
+        <li><strong>Streaming sources</strong> — linked via embedded web view. ShowAroo does not host or control these sources and is not responsible for their privacy practices</li>
       </ul>
     </div>
 
-    <div class="section" id="s5">
-      <div class="section-head"><span class="sec-num">05</span><h2>Data Security</h2></div>
-      <p>Authentication tokens are stored using your device's built-in encrypted secure storage (Android Keystore / iOS Secure Enclave). We do not transmit sensitive data over unencrypted connections.</p>
-      <p>Since all data remains on your device, its security also depends on your device's security. We recommend keeping your device updated and protected with a screen lock.</p>
-    </div>
-
-    <div class="section" id="s6">
-      <div class="section-head"><span class="sec-num">06</span><h2>Children's Privacy</h2></div>
-      <p>ShowAroo is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you believe your child has provided information through the app, please contact us and we will take steps to remove it.</p>
-    </div>
-
+    <!-- 07 (was 05) -->
     <div class="section" id="s7">
-      <div class="section-head"><span class="sec-num">07</span><h2>Your Rights</h2></div>
+      <div class="section-head"><span class="sec-num">07</span><h2>Data Security</h2></div>
+      <p>Authentication tokens are stored using your device's built-in encrypted secure storage (Android Keystore / iOS Secure Enclave). We do not transmit sensitive data over unencrypted connections.</p>
+      <p>Since all ShowAroo data remains on your device, its security also depends on your device's own security settings. We recommend keeping your device updated and protected with a screen lock.</p>
+    </div>
+
+    <!-- 08 (was 06) — updated for AdMob/COPPA -->
+    <div class="section" id="s8">
+      <div class="section-head"><span class="sec-num">08</span><h2>Children's Privacy</h2></div>
+      <p>ShowAroo is not directed at children under the age of 13 and is not suitable for use by children. The app displays interest-based advertisements via Google AdMob, which requires users to be at least 13 years of age in most jurisdictions.</p>
+      <p>We do not knowingly collect personal information from children. If you believe your child has provided information through the app or has been exposed to personalised ads, please contact us and we will take appropriate steps, including removing any such data.</p>
+    </div>
+
+    <!-- 09 (was 07) — updated to include ad opt-out right -->
+    <div class="section" id="s9">
+      <div class="section-head"><span class="sec-num">09</span><h2>Your Rights</h2></div>
       <p>Since ShowAroo does not store your data on any servers, you have full control:</p>
       <ul>
-        <li><strong>Delete your data</strong> — uninstalling the app removes all locally stored data</li>
-        <li><strong>Sign out</strong> — clears your session and cached profile information</li>
+        <li><strong>Delete your data</strong> — uninstalling the app removes all locally stored data from your device</li>
+        <li><strong>Sign out</strong> — clears your session and cached profile information from the app</li>
         <li><strong>Revoke Google access</strong> — via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
+        <li><strong>Opt out of personalised ads</strong> — via your device's advertising settings or <a href="https://adssettings.google.com" target="_blank">Google Ad Settings</a> (see <a href="#s3">Section 03</a>)</li>
       </ul>
     </div>
 
-    <div class="section" id="s8">
-      <div class="section-head"><span class="sec-num">08</span><h2>Policy Changes</h2></div>
-      <p>We may update this Privacy Policy periodically. When changes are made, we will update the "Last updated" date at the top of this page. Continued use of ShowAroo after changes constitutes acceptance of the updated policy.</p>
+    <!-- 10 (was 08) -->
+    <div class="section" id="s10">
+      <div class="section-head"><span class="sec-num">10</span><h2>Policy Changes</h2></div>
+      <p>We may update this Privacy Policy periodically. When material changes are made, we will update the "Last updated" date at the top of this page. Continued use of ShowAroo after changes constitutes acceptance of the updated policy.</p>
     </div>
 
-    <div class="section" id="s9">
-      <div class="section-head"><span class="sec-num">09</span><h2>Contact Us</h2></div>
+    <!-- 11 (was 09) -->
+    <div class="section" id="s11">
+      <div class="section-head"><span class="sec-num">11</span><h2>Contact Us</h2></div>
       <p>For questions or concerns about this Privacy Policy, contact us through the ShowAroo app's support channel. We aim to respond to all privacy-related inquiries within 72 hours.</p>
       <div class="callout">
         <p>You can also reach us by opening ShowAroo → Profile → About for support contact details.</p>
@@ -547,8 +566,8 @@ footer {
   <div class="footer-inner">
     <span class="footer-copy">© 2026 ShowAroo. All rights reserved.</span>
     <nav class="footer-nav">
-      <a href="index.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+      <a href="https://setyuth.github.io/showaroo-legal/index.html">Privacy Policy</a>
+      <a href="https://setyuth.github.io/showaroo-legal/terms.html">Terms of Service</a>
     </nav>
   </div>
 </footer>
