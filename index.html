@@ -343,6 +343,11 @@ li::before {
   align-items: flex-start;
 }
 
+/* Last card spans both columns when total is odd */
+.feature-grid .feature-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .feature-icon {
   width: 32px;
   height: 32px;
@@ -440,6 +445,7 @@ footer {
   .sidebar { display: none; }
   h1 { font-size: 2.25rem; }
   .feature-grid { grid-template-columns: 1fr; }
+  .feature-grid .feature-card:last-child:nth-child(odd) { grid-column: auto; }
 }
 </style>
 </head>
@@ -497,7 +503,7 @@ footer {
   <main class="content">
 
     <div class="callout">
-      <p>ShowAroo is built with your privacy in mind. We do not sell or share your personal data. All your activity — watch history, custom lists, episode tracking — is stored exclusively on your device. The app displays third-party ads via Google AdMob — see <a href="#s3">Section 03</a> for full details on what AdMob collects and how to opt out.</p>
+      <p>ShowAroo is built with your privacy in mind. We do not sell or share your personal data. All your activity — watch history, watchlist, episode tracking — is stored exclusively on your device. The app displays third-party ads via Google AdMob — see <a href="#s3">Section 03</a> for full details on what AdMob collects and how to opt out.</p>
     </div>
 
     <!-- 01 -->
@@ -526,7 +532,7 @@ footer {
           </div>
           <div class="feature-body">
             <strong>Mark as Watched &amp; Watch History</strong>
-            <span>Titles you've marked as watched and your full viewing history.</span>
+            <span>Titles you've marked as watched, optional star ratings, and your full viewing history.</span>
           </div>
         </div>
         <div class="feature-card">
@@ -549,20 +555,11 @@ footer {
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-          </div>
-          <div class="feature-body">
-            <strong>Custom Lists</strong>
-            <span>Unlimited personalised lists you create and manage.</span>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
           </div>
           <div class="feature-body">
             <strong>Streaming Service Filter</strong>
-            <span>Your preferred provider preferences for filtering results.</span>
+            <span>Your preferred provider preferences for filtering discovery results.</span>
           </div>
         </div>
         <div class="feature-card">
@@ -639,7 +636,7 @@ footer {
     <!-- 07 -->
     <div class="section" id="s7">
       <div class="section-head"><span class="sec-num">07</span><h2>Data Storage</h2></div>
-      <p>All preferences and activity data (watch history, custom lists, episode progress, streaming service preferences) are stored exclusively on your device using local on-device storage. This data never leaves your device — ShowAroo has no servers that store user data.</p>
+      <p>All preferences and activity data (watch history, episode progress, streaming service preferences, watchlist) are stored exclusively on your device using local on-device storage. This data never leaves your device — ShowAroo has no servers that store user data.</p>
       <p>Authentication tokens are stored in your device's encrypted secure storage and are never transmitted to or stored by ShowAroo.</p>
     </div>
 
@@ -674,7 +671,7 @@ footer {
       <div class="section-head"><span class="sec-num">11</span><h2>Your Rights</h2></div>
       <p>Since ShowAroo does not store your data on any servers, you have full control:</p>
       <ul>
-        <li><strong>Delete your data</strong> — uninstalling the app removes all locally stored data from your device (watch history, custom lists, episode progress, preferences)</li>
+        <li><strong>Delete your data</strong> — uninstalling the app removes all locally stored data from your device (watch history, episode progress, streaming preferences, watchlist)</li>
         <li><strong>Sign out</strong> — clears your session and cached profile information from the app</li>
         <li><strong>Revoke Google access</strong> — via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
         <li><strong>Opt out of personalised ads</strong> — via your device's advertising settings or <a href="https://adssettings.google.com" target="_blank">Google Ad Settings</a> (see <a href="#s4">Section 04</a>)</li>
