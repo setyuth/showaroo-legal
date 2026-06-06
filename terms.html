@@ -69,45 +69,22 @@ nav {
   justify-content: space-between;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  border: none;
-}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; border: none; }
 
-.logo img {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
-  object-fit: cover;
-}
+.logo img { width: 36px; height: 36px; border-radius: 9px; object-fit: cover; }
 
 .logo-fallback {
-  width: 36px;
-  height: 36px;
+  width: 36px; height: 36px;
   border-radius: 9px;
   background: var(--red);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 800;
-  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800; color: white;
   flex-shrink: 0;
   box-shadow: 0 0 20px rgba(229,9,20,0.4);
 }
 
-.logo-text {
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--on);
-}
-
+.logo-text { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.03em; color: var(--on); }
 .logo-text em { font-style: normal; color: var(--red); }
-
 .nav-links { display: flex; gap: 4px; }
 
 .nav-link {
@@ -121,11 +98,7 @@ nav {
   transition: color 0.2s, background 0.2s;
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--on);
-  background: var(--surface);
-  border: none;
-}
+.nav-link:hover, .nav-link.active { color: var(--on); background: var(--surface); border: none; }
 
 .hero {
   position: relative;
@@ -152,17 +125,8 @@ nav {
   margin-bottom: 28px;
 }
 
-.badge-dot {
-  width: 5px; height: 5px;
-  background: var(--red);
-  border-radius: 50%;
-  animation: blink 2s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
+.badge-dot { width: 5px; height: 5px; background: var(--red); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 3.75rem);
@@ -173,28 +137,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-.hero-meta {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
 
-.meta-pill {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.8125rem;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.meta-pill svg {
-  width: 13px; height: 13px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 2;
-  opacity: 0.6;
-}
+.meta-pill { display: flex; align-items: center; gap: 7px; font-size: 0.8125rem; color: var(--muted); font-weight: 500; }
+.meta-pill svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; opacity: 0.6; }
 
 .page-body {
   position: relative;
@@ -208,11 +154,7 @@ h1 {
   align-items: start;
 }
 
-.sidebar {
-  position: sticky;
-  top: 80px;
-  padding: 32px 0;
-}
+.sidebar { position: sticky; top: 80px; padding: 32px 0; }
 
 .toc-label {
   font-size: 0.6875rem;
@@ -224,12 +166,7 @@ h1 {
   padding-left: 4px;
 }
 
-.toc-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
+.toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
 
 .toc-list a {
   display: flex;
@@ -245,86 +182,26 @@ h1 {
   transition: color 0.15s, background 0.15s;
 }
 
-.toc-list a:hover {
-  color: var(--on2);
-  background: var(--surface);
-  border: none;
-}
+.toc-list a:hover { color: var(--on2); background: var(--surface); border: none; }
 
-.toc-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem;
-  color: var(--red);
-  opacity: 0.6;
-  min-width: 20px;
-}
+.toc-num { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--red); opacity: 0.6; min-width: 20px; }
 
 .content { padding: 32px 0; }
-
-.section {
-  padding: 48px 0;
-  border-bottom: 1px solid var(--border);
-}
-
+.section { padding: 48px 0; border-bottom: 1px solid var(--border); }
 .section:last-child { border-bottom: none; }
+.section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
 
-.section-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
-}
-
-.sec-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.6875rem;
-  color: var(--red);
-  opacity: 0.7;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--on);
-}
-
-p {
-  color: var(--on2);
-  margin-bottom: 14px;
-  font-weight: 400;
-}
-
+.sec-num { font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem; color: var(--red); opacity: 0.7; font-weight: 500; }
+h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.025em; color: var(--on); }
+p { color: var(--on2); margin-bottom: 14px; font-weight: 400; }
 p:last-child { margin-bottom: 0; }
-
 strong { color: var(--on); font-weight: 600; }
 
-ul {
-  list-style: none;
-  margin: 16px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+ul { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
+li { display: flex; align-items: flex-start; gap: 12px; color: var(--on2); }
+li::before { content: ''; width: 4px; height: 4px; background: var(--red); border-radius: 50%; flex-shrink: 0; margin-top: 0.65em; }
 
-li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: var(--on2);
-}
-
-li::before {
-  content: '';
-  width: 4px; height: 4px;
-  background: var(--red);
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-top: 0.65em;
-}
-
-/* Feature list for app features section */
+/* Feature list */
 .feature-list {
   list-style: none;
   margin: 20px 0;
@@ -345,44 +222,37 @@ li::before {
 }
 
 .feature-list li:last-child { border-bottom: none; }
-
 .feature-list li::before { display: none; }
 
 .feature-list .fi {
-  width: 28px;
-  height: 28px;
+  width: 28px; height: 28px;
   border-radius: 7px;
   background: var(--red-subtle);
   border: 1px solid var(--red-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
-.feature-list .fi svg {
-  width: 13px; height: 13px;
-  stroke: var(--red);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.feature-list .fi svg { width: 13px; height: 13px; stroke: var(--red); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.feature-list .ft strong { display: block; font-size: 0.875rem; font-weight: 600; color: var(--on); margin-bottom: 2px; }
+.feature-list .ft span { font-size: 0.8125rem; color: var(--muted); line-height: 1.5; }
+
+/* sync/exception note inside feature list item */
+.exception-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: rgba(229,9,20,0.06);
+  border: 1px solid rgba(229,9,20,0.18);
 }
 
-.feature-list .ft strong {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--on);
-  margin-bottom: 2px;
-}
-
-.feature-list .ft span {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  line-height: 1.5;
-}
+.exception-note .en-icon { font-size: 0.75rem; color: var(--red); flex-shrink: 0; margin-top: 1px; }
+.exception-note span { font-size: 0.75rem; color: var(--on2); line-height: 1.5; }
 
 .callout {
   background: var(--surface);
@@ -393,28 +263,12 @@ li::before {
   margin: 20px 0;
 }
 
-.callout p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--on2);
-}
+.callout p { margin: 0; font-size: 0.875rem; color: var(--on2); }
 
-a {
-  color: var(--red);
-  text-decoration: none;
-  border-bottom: 1px solid var(--red-border);
-  transition: border-color 0.15s;
-  font-weight: 500;
-}
-
+a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red-border); transition: border-color 0.15s; font-weight: 500; }
 a:hover { border-color: var(--red); }
 
-footer {
-  position: relative;
-  z-index: 1;
-  border-top: 1px solid var(--border);
-  background: var(--bg2);
-}
+footer { position: relative; z-index: 1; border-top: 1px solid var(--border); background: var(--bg2); }
 
 .footer-inner {
   max-width: 900px;
@@ -428,17 +282,8 @@ footer {
 }
 
 .footer-copy { font-size: 0.8125rem; color: var(--muted); }
-
 .footer-nav { display: flex; gap: 20px; }
-
-.footer-nav a {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  border: none;
-  transition: color 0.15s;
-  font-weight: 400;
-}
-
+.footer-nav a { font-size: 0.8125rem; color: var(--muted); border: none; transition: color 0.15s; font-weight: 400; }
 .footer-nav a:hover { color: var(--on2); border: none; }
 
 @media (max-width: 680px) {
@@ -514,12 +359,14 @@ footer {
     <div class="section" id="s2">
       <div class="section-head"><span class="sec-num">02</span><h2>Use of the App</h2></div>
       <p>ShowAroo is provided for personal, non-commercial use only. The App is intended to help users discover movie and TV show information, track their viewing activity, and find where to watch titles legally. You agree to use the App only for lawful purposes.</p>
+      <p>The App uses <strong>Firebase Remote Config</strong> (Google LLC) to remotely manage features, geo-availability, and required version updates. Mandatory app updates may be enforced via the <strong>Google Play In-App Update API</strong>. You agree to install required updates in order to continue using the App.</p>
     </div>
 
     <!-- 03 -->
     <div class="section" id="s3">
       <div class="section-head"><span class="sec-num">03</span><h2>Content</h2></div>
       <p>All movie and TV show content, metadata, titles, descriptions, posters, and images are provided by <strong>TMDB (The Movie Database)</strong> and remain the property of their respective copyright holders. ShowAroo does not claim ownership of any content displayed in the App.</p>
+      <p>Trailers are provided via <strong>YouTube</strong> (Google LLC). In-app trailer playback and any handoff to the YouTube app are subject to <a href="https://www.youtube.com/t/terms" target="_blank">YouTube's Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. ShowAroo does not share personal data with YouTube.</p>
     </div>
 
     <!-- 04 -->
@@ -539,7 +386,7 @@ footer {
           <div class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg></div>
           <div class="ft">
             <strong>Continue Watching</strong>
-            <span>Saves resume points for titles you're currently watching. This data is stored locally on your device only.</span>
+            <span>Saves resume points for titles you're currently watching. Stored locally on your device only.</span>
           </div>
         </li>
         <li>
@@ -553,7 +400,7 @@ footer {
           <div class="fi"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg></div>
           <div class="ft">
             <strong>Streaming Service Filter</strong>
-            <span>Filter discovery results and availability by your preferred streaming providers. Preferences are stored locally.</span>
+            <span>Filter discovery results and availability by your preferred streaming providers. Preferences are stored locally on your device.</span>
           </div>
         </li>
         <li>
@@ -561,6 +408,24 @@ footer {
           <div class="ft">
             <strong>Watchlist</strong>
             <span>Save titles to watch later. Stored locally on your device.</span>
+            <div class="exception-note">
+              <span class="en-icon">⚠</span>
+              <span><strong>Exception:</strong> if you are signed in to TMDB, your watchlist is also synced to TMDB's servers and is subject to TMDB's Terms of Service and Privacy Policy.</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="fi"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div>
+          <div class="ft">
+            <strong>Notification History</strong>
+            <span>Read/unread state of your in-app notifications is stored locally on your device only.</span>
+          </div>
+        </li>
+        <li>
+          <div class="fi"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></div>
+          <div class="ft">
+            <strong>Share</strong>
+            <span>Creates a 1080×1350 share image (poster, optional star rating, and ShowAroo branding) entirely on your device using the OS share sheet. ShowAroo does not receive, upload, or store the shared image or any share data.</span>
           </div>
         </li>
       </ul>
@@ -610,7 +475,7 @@ footer {
         <li>Your account with the respective provider is subject to that provider's own terms of service</li>
         <li>You are responsible for maintaining the security of your device and credentials</li>
         <li>You may sign out at any time via the Profile screen</li>
-        <li>Account data is stored locally on your device, not on ShowAroo servers</li>
+        <li>Account data is stored locally on your device, not on ShowAroo servers. <strong>Exception:</strong> if signed in to TMDB, your watchlist is also synced to TMDB's servers — see <a href="#s4">Section 04</a></li>
       </ul>
     </div>
 
@@ -632,6 +497,7 @@ footer {
       <div class="section-head"><span class="sec-num">10</span><h2>Disclaimers</h2></div>
       <p>ShowAroo is provided "as is" without warranties of any kind. We do not warrant that the App will be uninterrupted, error-free, or that content information will always be accurate or up to date.</p>
       <p>We are not responsible for the content of third-party advertisements displayed within the App, or for the products and services offered by third-party advertisers or streaming providers.</p>
+      <p>The App uses <strong>Firebase Remote Config</strong> to manage features and availability remotely. Certain functionality, content, or geographic availability may be adjusted, restricted, or disabled remotely without prior notice.</p>
     </div>
 
     <!-- 11 -->
@@ -642,6 +508,7 @@ footer {
         <li>Your use of or inability to use the App</li>
         <li>Any content, products, or services accessed through third-party streaming links opened in the external browser</li>
         <li>Third-party advertisements displayed within the App, including any damages arising from your reliance on advertised products or services</li>
+        <li>Changes to features, availability, or functionality resulting from remote configuration (Firebase Remote Config) or mandatory update enforcement</li>
       </ul>
     </div>
 
