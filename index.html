@@ -100,15 +100,8 @@ nav {
   box-shadow: 0 0 20px rgba(229,9,20,0.4);
 }
 
-.logo-text {
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--on);
-}
-
+.logo-text { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.03em; color: var(--on); }
 .logo-text em { font-style: normal; color: var(--red); }
-
 .nav-links { display: flex; gap: 4px; }
 
 .nav-link {
@@ -122,11 +115,7 @@ nav {
   transition: color 0.2s, background 0.2s;
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--on);
-  background: var(--surface);
-  border: none;
-}
+.nav-link:hover, .nav-link.active { color: var(--on); background: var(--surface); border: none; }
 
 .hero {
   position: relative;
@@ -160,10 +149,7 @@ nav {
   animation: blink 2s ease-in-out infinite;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 3.75rem);
@@ -174,11 +160,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.hero-meta {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
 
 .meta-pill {
   display: flex;
@@ -189,13 +171,7 @@ h1 {
   font-weight: 500;
 }
 
-.meta-pill svg {
-  width: 13px; height: 13px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 2;
-  opacity: 0.6;
-}
+.meta-pill svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; opacity: 0.6; }
 
 .page-body {
   position: relative;
@@ -209,11 +185,7 @@ h1 {
   align-items: start;
 }
 
-.sidebar {
-  position: sticky;
-  top: 80px;
-  padding: 32px 0;
-}
+.sidebar { position: sticky; top: 80px; padding: 32px 0; }
 
 .toc-label {
   font-size: 0.6875rem;
@@ -225,12 +197,7 @@ h1 {
   padding-left: 4px;
 }
 
-.toc-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
+.toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
 
 .toc-list a {
   display: flex;
@@ -246,11 +213,7 @@ h1 {
   transition: color 0.15s, background 0.15s;
 }
 
-.toc-list a:hover {
-  color: var(--on2);
-  background: var(--surface);
-  border: none;
-}
+.toc-list a:hover { color: var(--on2); background: var(--surface); border: none; }
 
 .toc-num {
   font-family: 'JetBrains Mono', monospace;
@@ -262,19 +225,10 @@ h1 {
 
 .content { padding: 32px 0; }
 
-.section {
-  padding: 48px 0;
-  border-bottom: 1px solid var(--border);
-}
-
+.section { padding: 48px 0; border-bottom: 1px solid var(--border); }
 .section:last-child { border-bottom: none; }
 
-.section-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
-}
+.section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
 
 .sec-num {
   font-family: 'JetBrains Mono', monospace;
@@ -284,37 +238,15 @@ h1 {
   font-weight: 500;
 }
 
-h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--on);
-}
+h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.025em; color: var(--on); }
 
-p {
-  color: var(--on2);
-  margin-bottom: 14px;
-  font-weight: 400;
-}
-
+p { color: var(--on2); margin-bottom: 14px; font-weight: 400; }
 p:last-child { margin-bottom: 0; }
-
 strong { color: var(--on); font-weight: 600; }
 
-ul {
-  list-style: none;
-  margin: 16px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+ul { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 10px; }
 
-li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: var(--on2);
-}
+li { display: flex; align-items: flex-start; gap: 12px; color: var(--on2); }
 
 li::before {
   content: '';
@@ -325,7 +257,7 @@ li::before {
   margin-top: 0.65em;
 }
 
-/* Feature grid for local-data section */
+/* 2-col feature grid */
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -343,14 +275,8 @@ li::before {
   align-items: flex-start;
 }
 
-/* Last card spans both columns when total is odd */
-.feature-grid .feature-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-}
-
 .feature-icon {
-  width: 32px;
-  height: 32px;
+  width: 32px; height: 32px;
   border-radius: 8px;
   background: var(--red-subtle);
   border: 1px solid var(--red-border);
@@ -360,28 +286,25 @@ li::before {
   flex-shrink: 0;
 }
 
-.feature-icon svg {
-  width: 15px; height: 15px;
-  stroke: var(--red);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.feature-icon svg { width: 15px; height: 15px; stroke: var(--red); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.feature-body strong { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--on); margin-bottom: 3px; }
+.feature-body span { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+
+/* sync note inside card */
+.sync-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(229,9,20,0.06);
+  border: 1px solid rgba(229,9,20,0.15);
 }
 
-.feature-body strong {
-  display: block;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--on);
-  margin-bottom: 3px;
-}
-
-.feature-body span {
-  font-size: 0.75rem;
-  color: var(--muted);
-  line-height: 1.5;
-}
+.sync-note-icon { font-size: 0.6875rem; color: var(--red); flex-shrink: 0; margin-top: 1px; }
+.sync-note span { font-size: 0.7rem; color: var(--on2); line-height: 1.45; }
 
 .callout {
   background: var(--surface);
@@ -392,28 +315,32 @@ li::before {
   margin: 20px 0;
 }
 
-.callout p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--on2);
-}
+.callout p { margin: 0; font-size: 0.875rem; color: var(--on2); }
 
-a {
-  color: var(--red);
-  text-decoration: none;
-  border-bottom: 1px solid var(--red-border);
-  transition: border-color 0.15s;
-  font-weight: 500;
-}
-
+a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red-border); transition: border-color 0.15s; font-weight: 500; }
 a:hover { border-color: var(--red); }
 
-footer {
-  position: relative;
-  z-index: 1;
-  border-top: 1px solid var(--border);
-  background: var(--bg2);
+/* third-party service list */
+.service-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+
+.service-list li {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
+
+.service-list li:last-child { border-bottom: none; }
+.service-list li::before { display: none; }
+
+.service-list .svc-name { font-size: 0.875rem; font-weight: 600; color: var(--on); }
+.service-list .svc-desc { font-size: 0.8125rem; color: var(--on2); line-height: 1.5; }
+.service-list .svc-link { font-size: 0.75rem; color: var(--red); font-family: 'JetBrains Mono', monospace; border: none; margin-top: 2px; }
+.service-list .svc-link:hover { border: none; opacity: 0.8; }
+
+footer { position: relative; z-index: 1; border-top: 1px solid var(--border); background: var(--bg2); }
 
 .footer-inner {
   max-width: 900px;
@@ -427,17 +354,8 @@ footer {
 }
 
 .footer-copy { font-size: 0.8125rem; color: var(--muted); }
-
 .footer-nav { display: flex; gap: 20px; }
-
-.footer-nav a {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  border: none;
-  transition: color 0.15s;
-  font-weight: 400;
-}
-
+.footer-nav a { font-size: 0.8125rem; color: var(--muted); border: none; transition: color 0.15s; font-weight: 400; }
 .footer-nav a:hover { color: var(--on2); border: none; }
 
 @media (max-width: 680px) {
@@ -445,7 +363,6 @@ footer {
   .sidebar { display: none; }
   h1 { font-size: 2.25rem; }
   .feature-grid { grid-template-columns: 1fr; }
-  .feature-grid .feature-card:last-child:nth-child(odd) { grid-column: auto; }
 }
 </style>
 </head>
@@ -470,7 +387,7 @@ footer {
   <h1>Privacy Policy</h1>
   <div class="hero-meta">
     <span class="meta-pill">
-      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
       Last updated: June 2026
     </span>
     <span class="meta-pill">
@@ -503,7 +420,7 @@ footer {
   <main class="content">
 
     <div class="callout">
-      <p>ShowAroo is built with your privacy in mind. We do not sell or share your personal data. All your activity — watch history, watchlist, episode tracking — is stored exclusively on your device. The app displays third-party ads via Google AdMob — see <a href="#s3">Section 03</a> for full details on what AdMob collects and how to opt out.</p>
+      <p>ShowAroo is built with your privacy in mind. We do not sell or share your personal data. All your activity — watch history, watchlist, episode tracking — is stored exclusively on your device. The app displays third-party ads via Google AdMob — see <a href="#s3">Section 03</a> for full details.</p>
     </div>
 
     <!-- 01 -->
@@ -526,15 +443,17 @@ footer {
       <p>All in-app activity you create in ShowAroo is stored <strong>exclusively on your device</strong> and never transmitted to ShowAroo's servers. This includes every feature listed below.</p>
 
       <div class="feature-grid">
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <div class="feature-body">
             <strong>Mark as Watched &amp; Watch History</strong>
-            <span>Titles you've marked as watched, optional star ratings, and your full viewing history.</span>
+            <span>Titles you've marked as watched, optional star ratings (1–5), and your full viewing history.</span>
           </div>
         </div>
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
@@ -544,6 +463,7 @@ footer {
             <span>Resume points for titles you're currently watching.</span>
           </div>
         </div>
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
@@ -553,6 +473,7 @@ footer {
             <span>Per-series progress including individual watched episodes.</span>
           </div>
         </div>
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
@@ -562,6 +483,7 @@ footer {
             <span>Your preferred provider preferences for filtering discovery results.</span>
           </div>
         </div>
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
@@ -569,12 +491,27 @@ footer {
           <div class="feature-body">
             <strong>Watchlist</strong>
             <span>Titles you've saved to watch later.</span>
+            <div class="sync-note">
+              <span class="sync-note-icon">⚠</span>
+              <span>If signed in to TMDB, your watchlist is also synced to TMDB's servers — see <a href="#s8">Section 08</a>.</span>
+            </div>
           </div>
         </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Notification History</strong>
+            <span>Read/unread state of your in-app notifications, stored locally on your device only.</span>
+          </div>
+        </div>
+
       </div>
 
       <div class="callout">
-        <p>ShowAroo has no servers that store your activity. Uninstalling the app permanently removes all of this data from your device.</p>
+        <p>ShowAroo has no servers that store your personal activity. Uninstalling the app permanently removes all locally stored data from your device. <strong>Exception:</strong> if signed in to TMDB, your watchlist is also synced to TMDB's servers — see <a href="#s8">Section 08</a>.</p>
       </div>
     </div>
 
@@ -636,7 +573,8 @@ footer {
     <!-- 07 -->
     <div class="section" id="s7">
       <div class="section-head"><span class="sec-num">07</span><h2>Data Storage</h2></div>
-      <p>All preferences and activity data (watch history, episode progress, streaming service preferences, watchlist) are stored exclusively on your device using local on-device storage. This data never leaves your device — ShowAroo has no servers that store user data.</p>
+      <p>All preferences and activity data — watch history, episode progress, streaming service preferences, notification history, and watchlist — are stored exclusively on your device using local on-device storage. This data never leaves your device to ShowAroo's systems.</p>
+      <p><strong>Exception:</strong> if you are signed in to TMDB, your watchlist is also synced to TMDB's servers and is subject to TMDB's Privacy Policy (see <a href="#s8">Section 08</a>).</p>
       <p>Authentication tokens are stored in your device's encrypted secure storage and are never transmitted to or stored by ShowAroo.</p>
     </div>
 
@@ -644,11 +582,38 @@ footer {
     <div class="section" id="s8">
       <div class="section-head"><span class="sec-num">08</span><h2>Third-Party Services</h2></div>
       <p>ShowAroo integrates with the following third-party services, each subject to their own privacy policies:</p>
-      <ul>
-        <li><strong>Google Sign-In</strong> — optional authentication. Subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
-        <li><strong>Google AdMob</strong> — advertisement delivery and measurement. Subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. See <a href="#s3">Section 03</a> for details on what AdMob collects.</li>
-        <li><strong>TMDB (The Movie Database)</strong> — provides movie and TV metadata, posters, and ratings. No personal data is shared with TMDB. Subject to the <a href="https://www.themoviedb.org/privacy-policy" target="_blank">TMDB Privacy Policy</a></li>
-        <li><strong>JustWatch via TMDB "Where to Watch"</strong> — the app opens your external browser to show legal streaming availability powered by JustWatch data. No personal data is shared with TMDB or JustWatch by ShowAroo. Subject to the <a href="https://www.themoviedb.org/privacy-policy" target="_blank">TMDB Privacy Policy</a> and <a href="https://www.justwatch.com/us/privacy-policy" target="_blank">JustWatch Privacy Policy</a></li>
+
+      <ul class="service-list">
+        <li>
+          <span class="svc-name">Google Sign-In</span>
+          <span class="svc-desc">Optional authentication. No personal data is transmitted to ShowAroo.</span>
+          <a class="svc-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+        </li>
+        <li>
+          <span class="svc-name">Google AdMob</span>
+          <span class="svc-desc">Advertisement delivery and measurement. See <a href="#s3">Section 03</a> for full details on what AdMob collects.</span>
+          <a class="svc-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+        </li>
+        <li>
+          <span class="svc-name">Firebase (Google LLC)</span>
+          <span class="svc-desc">Remote Config is used for feature flags, geo-availability, and update enforcement. The Google Play In-App Update API is used to prompt and enforce mandatory app updates. Network requests to Firebase may be logged by Google.</span>
+          <a class="svc-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+        </li>
+        <li>
+          <span class="svc-name">YouTube (Google LLC)</span>
+          <span class="svc-desc">Trailers may play in-app via an embedded player or hand off to the YouTube app. In-app playback may share request data with Google/YouTube. No personal data is shared by ShowAroo.</span>
+          <a class="svc-link" href="https://www.youtube.com/t/terms" target="_blank">youtube.com/t/terms</a>
+        </li>
+        <li>
+          <span class="svc-name">TMDB (The Movie Database)</span>
+          <span class="svc-desc">Provides movie and TV metadata, posters, and ratings. No personal data is shared with TMDB unless you sign in to a TMDB account, in which case your watchlist is also synced to TMDB's servers.</span>
+          <a class="svc-link" href="https://www.themoviedb.org/privacy-policy" target="_blank">themoviedb.org/privacy-policy</a>
+        </li>
+        <li>
+          <span class="svc-name">JustWatch via TMDB "Where to Watch"</span>
+          <span class="svc-desc">The app opens your external browser to show legal streaming availability powered by JustWatch data. No personal data is shared with TMDB or JustWatch by ShowAroo.</span>
+          <a class="svc-link" href="https://www.justwatch.com/us/privacy-policy" target="_blank">justwatch.com/us/privacy-policy</a>
+        </li>
       </ul>
     </div>
 
@@ -671,7 +636,7 @@ footer {
       <div class="section-head"><span class="sec-num">11</span><h2>Your Rights</h2></div>
       <p>Since ShowAroo does not store your data on any servers, you have full control:</p>
       <ul>
-        <li><strong>Delete your data</strong> — uninstalling the app removes all locally stored data from your device (watch history, episode progress, streaming preferences, watchlist)</li>
+        <li><strong>Delete your data</strong> — uninstalling the app removes all locally stored data (watch history, episode progress, streaming preferences, notification history, watchlist)</li>
         <li><strong>Sign out</strong> — clears your session and cached profile information from the app</li>
         <li><strong>Revoke Google access</strong> — via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
         <li><strong>Opt out of personalised ads</strong> — via your device's advertising settings or <a href="https://adssettings.google.com" target="_blank">Google Ad Settings</a> (see <a href="#s4">Section 04</a>)</li>
