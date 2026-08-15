@@ -273,7 +273,10 @@ li::before {
   display: flex;
   gap: 14px;
   align-items: flex-start;
+  min-width: 0;
 }
+
+.feature-card.full { grid-column: 1 / -1; }
 
 .feature-icon {
   width: 32px; height: 32px;
@@ -288,6 +291,7 @@ li::before {
 
 .feature-icon svg { width: 15px; height: 15px; stroke: var(--red); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
+.feature-body { min-width: 0; }
 .feature-body strong { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--on); margin-bottom: 3px; }
 .feature-body span { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
 
@@ -306,6 +310,18 @@ li::before {
 .sync-note-icon { font-size: 0.6875rem; color: var(--red); flex-shrink: 0; margin-top: 1px; }
 .sync-note span { font-size: 0.7rem; color: var(--on2); line-height: 1.45; }
 
+.data-tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.data-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  color: var(--on2);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
 .callout {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -317,7 +333,7 @@ li::before {
 
 .callout p { margin: 0; font-size: 0.875rem; color: var(--on2); }
 
-a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red-border); transition: border-color 0.15s; font-weight: 500; }
+a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red-border); transition: border-color 0.15s; font-weight: 500; overflow-wrap: break-word; word-break: break-word; }
 a:hover { border-color: var(--red); }
 
 /* third-party service list */
@@ -337,7 +353,7 @@ a:hover { border-color: var(--red); }
 
 .service-list .svc-name { font-size: 0.875rem; font-weight: 600; color: var(--on); }
 .service-list .svc-desc { font-size: 0.8125rem; color: var(--on2); line-height: 1.5; }
-.service-list .svc-link { font-size: 0.75rem; color: var(--red); font-family: 'JetBrains Mono', monospace; border: none; margin-top: 2px; }
+.service-list .svc-link { font-size: 0.75rem; color: var(--red); font-family: 'JetBrains Mono', monospace; border: none; margin-top: 2px; word-break: break-all; }
 .service-list .svc-link:hover { border: none; opacity: 0.8; }
 
 footer { position: relative; z-index: 1; border-top: 1px solid var(--border); background: var(--bg2); }
@@ -363,6 +379,16 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
   .sidebar { display: none; }
   h1 { font-size: 2.25rem; }
   .feature-grid { grid-template-columns: 1fr; }
+  .feature-card.full { grid-column: 1; }
+  .nav-inner { padding: 0 16px; }
+  .hero { padding: 56px 16px 40px; }
+  .page-body { padding: 0 16px 72px; }
+}
+
+@media (max-width: 400px) {
+  .nav-links { gap: 0; }
+  .nav-link { padding: 6px 10px; font-size: 0.75rem; }
+  .logo-text { font-size: 1rem; }
 }
 </style>
 </head>
@@ -388,7 +414,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
   <div class="hero-meta">
     <span class="meta-pill">
       <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      Last updated: June 2026
+      Last updated: August 2026
     </span>
     <span class="meta-pill">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -420,13 +446,14 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
   <main class="content">
 
     <div class="callout">
-      <p>ShowAroo is built with your privacy in mind. We do not sell or share your personal data. All your activity — watch history, watchlist, episode tracking — is stored exclusively on your device. The app displays third-party ads via Google AdMob — see <a href="#s3">Section 03</a> for full details.</p>
+      <p>ShowAroo is built with your privacy in mind. We do not sell or share your personal data. Most of your activity — watch history, watchlist, episode tracking — is stored exclusively on your device. The one exception is watchlist episode notifications, an opt-in feature that syncs a minimal, anonymous set of data so we can alert you to new episodes — see <a href="#s2">Section 02</a> and <a href="#s5">Section 05</a>. The app displays third-party ads via Google AdMob — see <a href="#s3">Section 03</a> for full details.</p>
     </div>
 
     <!-- 01 -->
     <div class="section" id="s1">
       <div class="section-head"><span class="sec-num">01</span><h2>Information We Collect</h2></div>
-      <p>ShowAroo does not operate any servers and does not collect, store, or transmit personal information to ShowAroo's own systems. Account creation is not required to use the App.</p>
+      <p>ShowAroo does not operate its own servers and does not collect, store, or transmit personal information to any ShowAroo-owned system. Account creation is not required to use the App.</p>
+      <p>The one exception: if you enable <strong>watchlist episode notifications</strong>, your device syncs a small amount of anonymous data to our Firebase backend (operated by Google on our behalf) so we can check for new episodes and notify you. This is opt-in and off by default until you grant notification permission — see <a href="#s2">Section 02</a> for exactly what's synced.</p>
       <p>If you sign in with Google, the following is accessed and stored <strong>locally on your device only</strong>:</p>
       <ul>
         <li>Your display name</li>
@@ -439,8 +466,8 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
 
     <!-- 02 -->
     <div class="section" id="s2">
-      <div class="section-head"><span class="sec-num">02</span><h2>Your Activity Data (Stored Locally)</h2></div>
-      <p>All in-app activity you create in ShowAroo is stored <strong>exclusively on your device</strong> and never transmitted to ShowAroo's servers. This includes every feature listed below.</p>
+      <div class="section-head"><span class="sec-num">02</span><h2>Your Activity Data (Stored Locally, With One Opt-In Exception)</h2></div>
+      <p>All in-app activity you create in ShowAroo is stored on your device and never transmitted anywhere else — <strong>except</strong> for watchlist episode notifications, an opt-in feature described in full below.</p>
 
       <div class="feature-grid">
 
@@ -493,7 +520,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
             <span>Titles you've saved to watch later.</span>
             <div class="sync-note">
               <span class="sync-note-icon">⚠</span>
-              <span>If signed in to TMDB, your watchlist is also synced to TMDB's servers — see <a href="#s8">Section 08</a>.</span>
+              <span>If signed in to TMDB, also synced to TMDB's servers — see <a href="#s8">Section 08</a>. If watchlist episode notifications are on, your TV titles are also synced to Firebase — see below.</span>
             </div>
           </div>
         </div>
@@ -508,10 +535,29 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
           </div>
         </div>
 
+        <div class="feature-card full">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zM8 17v1a4 4 0 0 0 8 0v-1"></path></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Watchlist Episode Notifications <span style="color: var(--red); font-weight: 500;">(opt-in)</span></strong>
+            <span>Off until you grant notification permission. If enabled, ShowAroo syncs the following to a Firebase backend we operate, solely to check for newly aired episodes and alert you:</span>
+            <div class="data-tag-row">
+              <span class="data-tag">anonymous device ID</span>
+              <span class="data-tag">notification token</span>
+              <span class="data-tag">TV watchlist titles</span>
+            </div>
+            <div class="sync-note">
+              <span class="sync-note-icon">⚠</span>
+              <span>Never sold, shared with advertisers, or used beyond this feature. Turning the toggle off in Settings stops future alerts; the anonymous backend record may persist until inactive or manually removed. Uninstalling the app does not automatically delete it today — to request removal, contact us via Profile › About.</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="callout">
-        <p>ShowAroo has no servers that store your personal activity. Uninstalling the app permanently removes all locally stored data from your device. <strong>Exception:</strong> if signed in to TMDB, your watchlist is also synced to TMDB's servers — see <a href="#s8">Section 08</a>.</p>
+        <p>Aside from the opt-in exception above, ShowAroo has no servers that store your personal activity. Uninstalling the app permanently removes all locally stored data from your device. <strong>Exception:</strong> if signed in to TMDB, your watchlist is also synced to TMDB's servers — see <a href="#s8">Section 08</a>.</p>
       </div>
     </div>
 
@@ -555,7 +601,8 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
     <!-- 05 -->
     <div class="section" id="s5">
       <div class="section-head"><span class="sec-num">05</span><h2>Push Notifications</h2></div>
-      <p>ShowAroo may send push notifications about new movie releases, upcoming titles, and trending content. Notifications are delivered via your device's built-in notification system. No notification data is shared with third parties.</p>
+      <p>ShowAroo may send push notifications about new movie releases, upcoming titles, and trending content. Notifications are delivered via your device's built-in notification system.</p>
+      <p><strong>Watchlist episode notifications</strong> are an opt-in feature: if enabled, we sync an anonymous device ID, a notification token, and your TV watchlist titles to a Firebase backend we operate, used solely to detect newly aired episodes and alert you. See <a href="#s2">Section 02</a> for full details on exactly what is synced and how to have it removed. No notification data is shared with third parties or used for advertising.</p>
       <p>You can disable notifications at any time via <em>Settings → Notifications</em> or your device's notification settings.</p>
     </div>
 
@@ -567,14 +614,18 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
         <li>Displaying your name and photo on the Profile screen</li>
         <li>Maintaining your login session between app launches</li>
       </ul>
-      <p>ShowAroo does not use your personal information for advertising, analytics, or profiling. Ad data collected by AdMob is used solely by Google for ad delivery — ShowAroo has no access to it.</p>
+      <p>ShowAroo does not use your personal information for advertising, analytics, or profiling. Ad data collected by AdMob is used solely by Google for ad delivery — ShowAroo has no access to it. Data synced for watchlist episode notifications (Section 02) is used exclusively to check for and deliver episode alerts.</p>
     </div>
 
     <!-- 07 -->
     <div class="section" id="s7">
       <div class="section-head"><span class="sec-num">07</span><h2>Data Storage</h2></div>
-      <p>All preferences and activity data — watch history, episode progress, streaming service preferences, notification history, and watchlist — are stored exclusively on your device using local on-device storage. This data never leaves your device to ShowAroo's systems.</p>
-      <p><strong>Exception:</strong> if you are signed in to TMDB, your watchlist is also synced to TMDB's servers and is subject to TMDB's Privacy Policy (see <a href="#s8">Section 08</a>).</p>
+      <p>All preferences and activity data — watch history, episode progress, streaming service preferences, notification history, and watchlist — are stored on your device using local on-device storage.</p>
+      <p><strong>Exceptions:</strong></p>
+      <ul>
+        <li>If you are signed in to TMDB, your watchlist is also synced to TMDB's servers and is subject to TMDB's Privacy Policy (see <a href="#s8">Section 08</a>).</li>
+        <li>If you enable watchlist episode notifications, an anonymous device ID, notification token, and your TV watchlist titles are synced to our Firebase backend for the sole purpose of sending you episode alerts (see <a href="#s2">Section 02</a> and <a href="#s8">Section 08</a>).</li>
+      </ul>
       <p>Authentication tokens are stored in your device's encrypted secure storage and are never transmitted to or stored by ShowAroo.</p>
     </div>
 
@@ -596,7 +647,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
         </li>
         <li>
           <span class="svc-name">Firebase (Google LLC)</span>
-          <span class="svc-desc">Remote Config is used for feature flags, geo-availability, and update enforcement. The Google Play In-App Update API is used to prompt and enforce mandatory app updates. Network requests to Firebase may be logged by Google.</span>
+          <span class="svc-desc">Remote Config is used for feature flags, geo-availability, and update enforcement. The Google Play In-App Update API is used to prompt and enforce mandatory app updates. If you enable watchlist episode notifications, Firebase also provides: Cloud Messaging (delivers the notification), Cloud Firestore (stores your anonymous device record — notification token and TV watchlist titles), and Anonymous Authentication (assigns your device a random ID with no personal information attached, used only to keep your Firestore record separate from other devices). Network requests to Firebase may be logged by Google.</span>
           <a class="svc-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
         </li>
         <li>
@@ -621,7 +672,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
     <div class="section" id="s9">
       <div class="section-head"><span class="sec-num">09</span><h2>Data Security</h2></div>
       <p>Authentication tokens are stored using your device's built-in encrypted secure storage (Android Keystore / iOS Secure Enclave). We do not transmit sensitive data over unencrypted connections.</p>
-      <p>Since all ShowAroo data remains on your device, its security also depends on your device's own security settings. We recommend keeping your device updated and protected with a screen lock.</p>
+      <p>Since almost all ShowAroo data remains on your device, its security also depends on your device's own security settings — we recommend keeping your device updated and protected with a screen lock. The exception is the minimal, anonymous data described in <a href="#s2">Section 02</a> for users who enable watchlist episode notifications, which is secured by Google Firebase's own infrastructure and is never linked to your name, email, or TMDB account.</p>
     </div>
 
     <!-- 10 -->
@@ -634,15 +685,15 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
     <!-- 11 -->
     <div class="section" id="s11">
       <div class="section-head"><span class="sec-num">11</span><h2>Your Rights</h2></div>
-      <p>Since ShowAroo does not store your data on any servers, you have full control:</p>
+      <p>Since ShowAroo stores almost all of your data only on your device, you have full control:</p>
       <ul>
-        <li><strong>Delete your data</strong> — uninstalling the app removes all locally stored data (watch history, episode progress, streaming preferences, notification history, watchlist)</li>
+        <li><strong>Delete your locally stored data</strong> — uninstalling the app removes all locally stored data (watch history, episode progress, streaming preferences, notification history, watchlist)</li>
+        <li><strong>Turn off watchlist episode notifications</strong> — Go to <em>Settings → Notifications</em> to immediately stop future alerts. To request deletion of the anonymous backend record itself (notification token + synced watchlist titles), contact us via Profile → About</li>
         <li><strong>Sign out</strong> — clears your session and cached profile information from the app</li>
         <li><strong>Revoke Google access</strong> — via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
         <li><strong>Opt out of personalised ads</strong> — via your device's advertising settings or <a href="https://adssettings.google.com" target="_blank">Google Ad Settings</a> (see <a href="#s4">Section 04</a>)</li>
         <li><strong>Withdraw GDPR consent (EEA/UK/Switzerland)</strong> — Go to <em>Settings → Privacy &amp; Ads</em> to update your consent choices</li>
         <li><strong>CCPA opt-out (US states)</strong> — Go to <em>Settings → Privacy &amp; Ads → Ad preferences → Don't sell or share my data</em></li>
-        <li><strong>Disable notifications</strong> — Go to <em>Settings → Notifications</em> or your device's notification settings</li>
       </ul>
     </div>
 
@@ -655,7 +706,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); ba
     <!-- 13 -->
     <div class="section" id="s13">
       <div class="section-head"><span class="sec-num">13</span><h2>Contact Us</h2></div>
-      <p>For questions or concerns about this Privacy Policy, contact us through the ShowAroo app's support channel. We aim to respond to all privacy-related inquiries within 72 hours.</p>
+      <p>For questions or concerns about this Privacy Policy — including requests to delete your anonymous notification backend record — contact us through the ShowAroo app's support channel. We aim to respond to all privacy-related inquiries within 72 hours.</p>
       <div class="callout">
         <p>You can reach us by opening ShowAroo → Profile → About for support contact details.</p>
       </div>
